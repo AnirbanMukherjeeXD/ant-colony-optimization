@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>Ant Colony Optimization</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.js"></script>
+		<script src="sketch.js"></script>
+		<script type="text/javascript" src="nodes.js"></script>
+		<script type="text/javascript" src="ants.js"></script>
+	</head>
+	<body>
+	
+	<center><a href="https://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms" target="_blank"><h1>Ant Colony Optimization</h1></a>
+	<a href="https://en.wikipedia.org/wiki/Shortest_path_problem" target="_blank"><h2>Shortest Path Problem</h2></a>
+	</center><br>
+		<div id="makeNodes">
+			<h2>Make the desirable number of nodes on the canvas</h2>
+			<h2>and then Enter Weights</h2>
+		</div>
+		<div id="Panel">
+			<br><br><br><br>
+			
+			
+			<table cellspacing="10">
+				<tr><td><button onclick="inputWeights()">Enter weights</button>
+				<td><button onclick="clearWeights()">Clear weights</button>
+				<tr><td><button onclick="clearPheromone()">Clear Pheromone</button>
+				<td><button onclick="clearNodes()">Clear nodes</button>
+				
+				<tr>
+					<td>Enter destination node
+					<td><input type="number" value="1" id="destinationNode" class="statInp" required>
+				<tr>
+					<td>Enter number of ants
+					<td><input type="number" value="10" id="antNumber" class="statInp" required>
+				<tr>
+					
+			</table>
+			
+					
+					Set Pheromone Rate :<br>
+					<input type="range" min="0" max="200" value="50" class="slider" id="p_coefficient">
+					<br>
+					<span id="p_value"></span>
+					<br><br>
+					
+					Set Evaporation Rate :<br>
+					<input type="range" min="0" max="100" value="20" class="slider" id="e_factor">
+					<br>
+					<span id="e_value"></span>
+					<br><br>
+					
+					<table>
+				<tr><td id="algOn"><button onclick="startAlgo()">Start Algorithm</button>
+					<td id="algOff"><button onclick="stopAlgo()">Stop Algorithm</button>
+					<td><button onclick="setConstants();ACO()">Step by Step</button>
+			</table>
+
+		</div>
+	</body>
+</html>

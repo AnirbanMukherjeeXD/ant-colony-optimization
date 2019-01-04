@@ -134,7 +134,7 @@ function selectNextNode(k){
 			}else{
 				if(1){
 					result=result>0?result:i;
-					console.log("oops");
+					//console.log("Reject");
 				}
 			}
 		}
@@ -158,18 +158,16 @@ function ACO(){
 				//gount++;
 				var nxtNode=selectNextNode(ai)
 				if(nxtNode==-1){												//DeadEnd
-					//console.log("Returning to..."+A[ai].visited[A[ai].visited.length-2]);
-					//A[ai].pos=A[ai].visited[A[ai].visited.length-2];		
 					A[ai].pos=A[ai].visited[A[ai].visited.indexOf(A[ai].pos)-1];
 					A[ai].path.pop();
 					console.log("Returned to "+A[ai].pos);
-					console.log("Path:  "+A[ai].path);
-					console.log("Visited length:  "+A[ai].visited.length);
-					console.log("Visited:  "+A[ai].visited);
+					//console.log("Path:  "+A[ai].path);
+					//console.log("Visited length:  "+A[ai].visited.length);
+					//console.log("Visited:  "+A[ai].visited);
 				}else{
 					moveAnt(ai,nxtNode);
 					if(A[ai].pos==destination)
-						console.log("Dest reachesss  "+destination)
+						console.log("Destination reached:  "+destination)
 				}
 			}
 		}

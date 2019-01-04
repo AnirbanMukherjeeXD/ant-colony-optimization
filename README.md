@@ -24,5 +24,8 @@ The path with the most prominent shade of red is the shortest path
 ### Modify parameters
 You can modify the *Pheromone Rate* and *Evaporation Rate* parameters while the algorithm is running to see the corresponding changes on the canvas
 
+## Technology
+p5.js
+
 ## Reference
 M. Dorigo and T. Stützle, Ant Colony Optimization, The MIT Press, Cambridge, 2004
